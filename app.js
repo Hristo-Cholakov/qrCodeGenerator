@@ -15,9 +15,14 @@ var key = document.getElementById("pass").value;
 
   function toggleVisibility(){
       var toggler = document.getElementById("pass");
+      var slasher = document.getElementById("slasher");
       if(toggler.type === "password"){
           toggler.type = "text"
+          slasher.classList.add("fa-eye-slash");
+          slasher.classList.remove("fa-eye");
       }else {
-          toggler.type = "password"
+          toggler.type = "password";
+          slasher.classList.remove("fa-eye-slash");
+          slasher.classList.add("fa-eye");
       }
   }
