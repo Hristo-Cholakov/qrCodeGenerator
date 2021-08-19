@@ -44,7 +44,7 @@
             </div>
           </nav>
         <!-- <h1>Please enter your details and hit the Generate button</h1> -->
-            <div id="form" class="container-fluid">
+            <div id="form" class="container-fluid row justify-content-center">
                 <form action="/action_page.php">
                 <label for="ssid">SSID:</label><br>
                 <i class="input-group bi bi-bar-chart-fill"></i><input type="text" id="ssid" name="ssid"><br><br>
@@ -56,11 +56,13 @@
                     <option value="None">None</option>
                   </select><br><br>
                 <label for="pass">Key:</label><br>
-                <i class="fa fa-key icon"></i> <input type="password" id="pass" name="pass"><br><br>
+                <i class="fa fa-key icon"></i><input type="password" id="pass" name="pass">
+                    <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                  <br><br>
                 <button type="button" class="btn btn-primary" onclick="codeGenerator()">Generate code</button><br>
                 </form> 
             </div>
-        <br><div id="qr" class="container"></div><br>
+        <br><div id="qr" class="container row justify-content-center"></div><br>
             <div id="wifi">
                 
             </div>
