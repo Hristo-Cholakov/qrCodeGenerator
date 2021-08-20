@@ -47,7 +47,7 @@
         <div id="form" class="container-fluid row justify-content-center">
           <form action="/action_page.php">
             <label for="ssid">SSID:</label><br>
-            <i class="fas fa-signal"></i><input type="text" id="ssid" name="ssid"><br><br>
+            <i class="fas fa-signal icon"></i><input type="text" id="ssid" name="ssid"><br><br>
             <label for="encr">Encryption:</label><br>
               <select id="encr" name="encr">
                 <option value="WPA">WPA</option>
@@ -58,10 +58,11 @@
             <label for="hidden">Hidden</label>
               <input id="hidden" type="checkbox"><br>
             <label for="pass">Key:</label><br>
-            <i class="fa fa-key icon"></i><input type="password" id="pass" name="pass">
+            <i class="fas fa-lock icon"></i><input type="password" id="pass" name="pass">
             <a onclick="toggleVisibility()"><i id="slasher" class="fa fa-eye" aria-hidden="true"></i></a>
             <br><br>
-            <button type="button" class="btn btn-primary" onclick="codeGenerator()">Generate code</button><br>
+            <button type="button" class="btn btn-primary" onclick="codeGenerator()">Generate code</button>
+            <button type="reset" class="btn btn-danger" onclick="resetQR()"><i class="fas fa-redo"></i></button>
           </form> 
         </div>
         <br><div id="qr" class="container-fluid row justify-content-center"></div><br>

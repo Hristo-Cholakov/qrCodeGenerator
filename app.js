@@ -6,7 +6,7 @@ function codeGenerator(){
     var key = document.getElementById("pass").value;
 // new QRCode(document.getElementById("qr"), "WIFI:S:home.cweiske.de;T:WPA;P:2342;H:true;");
     var canvas = new QRCode(document.getElementById("qr"), "WIFI:S:" + ssid + ";T:" + encr + ";P:" + key + ";" + "H:" + hiddenCheck + ";;");
-
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
 };
 
 function toggleVisibility(){
@@ -22,3 +22,7 @@ function toggleVisibility(){
             slasher.classList.add("fa-eye");
         }
     };
+
+function resetQR(){
+    document.getElementById("qr").innerHTML = "";
+};
