@@ -5,3 +5,9 @@
     min-width: 50px;
     text-align: center;
   }
+
+  .linkField {
+    align-items: center;
+    text-align: center;
+    margin-top: 2%;
+  }
