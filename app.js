@@ -6,12 +6,15 @@ function wifiCodeGenerator(){
     var key = document.getElementById("pass").value;
 // new QRCode(document.getElementById("qr"), "WIFI:S:home.cweiske.de;T:WPA;P:2342;H:true;");
     var canvas = new QRCode(document.getElementById("qr"), "WIFI:S:" + ssid + ";T:" + encr + ";P:" + key + ";" + "H:" + hiddenCheck + ";;");
-    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    document.getElementById("generator").disabled = true;
 };
 
 function urlCodeGenerator(){
     var urlString = document.getElementById("link").value;
     new QRCode(document.getElementById("qr"), urlString);
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    document.getElementById("generator").disabled = true;
 };
 
 function toggleVisibility(){
@@ -30,4 +33,5 @@ function toggleVisibility(){
 
 function resetQR(){
     document.getElementById("qr").innerHTML = "";
+    document.getElementById("generator").disabled = false;
 };
